@@ -1,0 +1,9 @@
+{% if vote_list %}
+    <ul>
+    {% for vote in vote_list %}
+        <li><a href="/vote/{{ vote.id }}/">{{ vote.vote_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>We are yet to add any votes. Come back later</p>
+{% endif %}
